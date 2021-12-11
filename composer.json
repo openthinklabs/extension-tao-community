@@ -1,5 +1,5 @@
 {
-    "name": "oat-sa/extension-tao-community",
+    "name": "openthinklabs/extension-tao-community",
     "description" : "extension that gather community tools in TAO",
     "type" : "tao-extension",
     "authors" : [
