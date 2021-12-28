@@ -128,7 +128,7 @@
         "openthinklabs/oatbox-extension-installer": "~1.1||dev-master",
 		"openthinklabs/generis" : ">=14.0.0",
 		"openthinklabs/tao-core" : ">=47.0.0",
-		"openthinkkabs/extension-tao-funcacl" : ">=7.0.0",
+		"openthinkkabs/extension-tao-funcacl" : ">=7.2.0.2",
 		"openthinkkabs/extension-tao-backoffice" : ">=6.0.0",
 		"openthinkkabs/extension-tao-itemqti-pci" : ">=7.0.0",
 		"openthinkkabs/extension-tao-delivery-rdf" : ">=14.3.0",
