@@ -122,12 +122,20 @@
         {
             "type": "vcs",
             "url": "git@github.com:openthinklabs/extension-tao-test.git"
-        }																										                
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:openthinklabs/lib-generis-search.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:openthinklabs/tao-core.git"
+        }                                
     ],	
     "require": {
         "openthinklabs/oatbox-extension-installer": "~1.1||dev-master",
-		"openthinklabs/generis" : ">=14.0.0",
-		"openthinklabs/tao-core" : ">=47.0.0",
+		"openthinklabs/generis" : "15.13.1.4",
+		"openthinklabs/tao-core" : "48.75.0.6",
 		"openthinklabs/extension-tao-funcacl" : ">=7.2.0.2",
 		"openthinklabs/extension-tao-backoffice" : ">=6.0.0",
 		"openthinklabs/extension-tao-itemqti-pci" : ">=7.0.0",
@@ -145,6 +153,15 @@
     "autoload" : {
         "psr-4" : {
             "oat\\taoCe\\" : ""
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "oat-sa/composer-npm-bridge": true,
+            "composer/package-versions-deprecated": true,
+            "openthinklabs/oatbox-extension-installer": true,
+            "openthinklabs/composer-npm-bridge": true,
+            "oat-sa/oatbox-extension-installer": true
         }
     }
 }
