@@ -16,9 +16,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  * Copyright (c) 2014 (original work) Open Assessment Technologies SA;
- *
- *
  */
+
+use oat\taoCe\scripts\install\MapHelpSectionFeatureFlag;
+use oat\taoCe\scripts\uninstall\RemoveSectionVisibilityFilterEntry;
+use oat\taoCe\scripts\uninstall\RevertEntryPoint;
+use oat\taoCe\scripts\uninstall\UnregisterLoginController;
 
 return [
     'name' => 'taoCe',
@@ -29,26 +32,54 @@ return [
     'update' => 'oat\\taoCe\\scripts\\update\\Updater',
     'managementRole' => 'http://www.tao.lu/Ontologies/generis.rdf#taoCeManager',
     'acl' => [
-        ['grant', 'http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole', ['ext' => 'taoCe', 'mod' => 'Main', 'act' => 'index']],
-        ['grant', 'http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole', ['ext' => 'taoCe', 'mod' => 'Home']],
-        ['grant', 'http://www.tao.lu/Ontologies/generis.rdf#AnonymousRole', ['ext' => 'taoCe', 'mod' => 'Main', 'act' => 'rootEntry']],
+        [
+            'grant',
+            'http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole',
+            [
+                'ext' => 'taoCe',
+                'mod' => 'Main',
+                'act' => 'index',
+            ],
+        ],
+        [
+            'grant',
+            'http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole',
+            [
+                'ext' => 'taoCe',
+                'mod' => 'Home',
+            ],
+        ],
+        [
+            'grant',
+            'http://www.tao.lu/Ontologies/generis.rdf#AnonymousRole',
+            [
+                'ext' => 'taoCe',
+                'mod' => 'Main',
+                'act' => 'rootEntry',
+            ],
+        ],
     ],
     'install' => [
         'php' => [
             dirname(__FILE__) . '/scripts/install/overrideEntryPoint.php',
-        ]
+            ],
     ],
     'uninstall' => [
+        'php' => [
+            UnregisterLoginController::class,
+            RemoveSectionVisibilityFilterEntry::class,
+            RevertEntryPoint::class,
+        ]
     ],
     'routes' => [
         '' => ['class' => 'oat\\taoCe\\model\\routing\\EntryRoute'],
-        '/taoCe' => 'oat\\taoCe\\actions'
+        '/taoCe' => 'oat\\taoCe\\actions',
     ],
     'constants' => [
         # views directory
-        "DIR_VIEWS" => dirname(__FILE__) . DIRECTORY_SEPARATOR . "views" . DIRECTORY_SEPARATOR,
+        'DIR_VIEWS' => dirname(__FILE__) . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR,
 
         #BASE URL (usually the domain root)
         'BASE_URL' => ROOT_URL . 'taoCe/',
-    ]
+    ],
 ];
