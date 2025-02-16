@@ -1,80 +1,80 @@
 {
-    "name": "openthinklabs/extension-tao-community",
-    "description" : "extension that gather community tools in TAO",
-    "type" : "tao-extension",
-    "authors" : [
-		{
-		"name" : "Open Assessment Technologies S.A.",
-		"homepage" : "http://www.taotesting.com"
-		},
-		{
-		"name": "Jérôme Bogaerts",
-		"role": "Developer"
-		},
-		{
-		"name": "Joel Bout",
-		"role": "Developer"
-		},
-		{
-		"name": "Bertrand Chevrier",
-		"role": "Developer"
-		},
-		{
-		"name": "Lionel Lecaque",
-		"role": "Developer"
-		},
-		{
-		"name": "Patrick Plichart",
-		"role": "Developer"
-		},
-		{
-		"name": "Dieter Raber",
-		"role": "Developer"
-		},
-		{
-		"name": "Somsack Sipasseuth",
-		"role": "Developer"
-		}
-	],
-	"support": {
-		"forum": "http://forum.taotesting.com",
-		"issues": "http://forge.taotesting.com"
-	},
-	"keywords" : [
-		"tao",
-		"oat",
-		"QTI",
-		"computer-based-assessment"
-	],
-	"homepage" : "http://www.taotesting.com",
-	"license" : [
-	"GPL-2.0-only"
-	],
-    "extra" : {
-    	"tao-extension-name" : "taoCe"
-    },
-    "minimum-stability" : "dev",
-    "require": {
-        "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
-		"oat-sa/generis" : ">=15.22",
-		"oat-sa/tao-core": ">=54.10.0",
-		"oat-sa/extension-tao-funcacl" : ">=7.0.0",
-		"oat-sa/extension-tao-backoffice" : ">=6.13.0",
-		"oat-sa/extension-tao-itemqti-pci" : ">=7.0.0",
-		"oat-sa/extension-tao-delivery-rdf" : ">=14.20.0",
-		"oat-sa/extension-tao-group" : ">=7.0.0",
-		"oat-sa/extension-tao-item" : ">=11.0.0",
-		"oat-sa/extension-tao-outcomerds" : ">=8.0.0",
-		"oat-sa/extension-tao-outcomeui" : ">=10.0.0",
-		"oat-sa/extension-tao-testqti" : ">=41.0.0",
-		"oat-sa/extension-tao-itemqti" : ">=27.0.0",
-		"oat-sa/extension-tao-testtaker" : ">=8.0.0",
-		"oat-sa/extension-tao-testqti-previewer" : ">=3.0.0",
-		"oat-sa/extension-tao-test" : ">=15.0.0"
-	},
-    "autoload" : {
-        "psr-4" : {
-            "oat\\taoCe\\" : ""
-        }
-    }
+  "name": "openthinklabs/extension-tao-community",
+  "description" : "extension that gather community tools in TAO",
+  "type" : "tao-extension",
+  "authors" : [
+  {
+  "name" : "Open Assessment Technologies S.A.",
+  "homepage" : "http://www.taotesting.com"
+  },
+  {
+  "name": "Jérôme Bogaerts",
+  "role": "Developer"
+  },
+  {
+  "name": "Joel Bout",
+  "role": "Developer"
+  },
+  {
+  "name": "Bertrand Chevrier",
+  "role": "Developer"
+  },
+  {
+  "name": "Lionel Lecaque",
+  "role": "Developer"
+  },
+  {
+  "name": "Patrick Plichart",
+  "role": "Developer"
+  },
+  {
+  "name": "Dieter Raber",
+  "role": "Developer"
+  },
+  {
+  "name": "Somsack Sipasseuth",
+  "role": "Developer"
+  }
+],
+"support": {
+  "forum": "http://forum.taotesting.com",
+  "issues": "http://forge.taotesting.com"
+},
+"keywords" : [
+  "tao",
+  "oat",
+  "QTI",
+  "computer-based-assessment"
+],
+"homepage" : "http://www.taotesting.com",
+"license" : [
+"GPL-2.0-only"
+],
+  "extra" : {
+    "tao-extension-name" : "taoCe"
+  },
+  "minimum-stability" : "dev",
+  "require": {
+  "openthinklabs/oatbox-extension-installer": "~1.1||dev-master",
+  "openthinklabs/generis" : ">=15.22||dev-master",
+  "openthinklabs/tao-core": ">=54.10.0||dev-master",
+  "openthinklabs/extension-tao-funcacl" : ">=7.0.0||dev-master",
+  "openthinklabs/extension-tao-backoffice" : ">=6.13.0||dev-master",
+  "openthinklabs/extension-tao-itemqti-pci" : ">=7.0.0||dev-master",
+  "openthinklabs/extension-tao-delivery-rdf" : ">=14.20.0||dev-master",
+  "openthinklabs/extension-tao-group" : ">=7.0.0||dev-master",
+  "openthinklabs/extension-tao-item" : ">=11.0.0||dev-master",
+  "openthinklabs/extension-tao-outcomerds" : ">=8.0.0||dev-master",
+  "openthinklabs/extension-tao-outcomeui" : ">=10.0.0||dev-master",
+  "openthinklabs/extension-tao-testqti" : ">=41.0.0||dev-master",
+  "openthinklabs/extension-tao-itemqti" : ">=27.0.0||dev-master",
+  "openthinklabs/extension-tao-testtaker" : ">=8.0.0||dev-master",
+  "openthinklabs/extension-tao-testqti-previewer" : ">=3.0.0||dev-master",
+  "openthinklabs/extension-tao-test" : ">=15.0.0||dev-master"
+},
+  "autoload" : {
+      "psr-4" : {
+          "oat\\taoCe\\" : ""
+      }
+  }
 }
